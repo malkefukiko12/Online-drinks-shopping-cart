@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baganes Grocery Store</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Baganes Online Grocery Store</h1>
+            
+
+            <div class="cart">
+                <span class="cart-items">Items in Cart: <span id="cart-count">0</span></span>
+                <span class="cart-total">Total: P<span id="cart-total">0.00</span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product-container">
+            <!-- Example of a product card -->
+            <div class="product">
+                <img src="images/gin.jpeg" alt="Gin">
+                <h2>Ginebra Gin 350Ml</h2>
+                <p class="price">P135.00 each</p>
+                <input type="number" id="gin-qty" min="1" value="1">
+                <button onclick="addToCart('Ginebra Gin', 135.00, 'gin-qty')">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+            <div class="product">
+                <img src="images/fiji.jpeg" alt="Water">
+                <h2>Water 1L</h2>
+                <p class="price">P1,200.00</p>
+                <input type="number" id="water-qty" min="1" value="1">
+                <button onclick="addToCart('Water', 1200.00, 'water-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/coke.jpeg" alt="Coke">
+                <h2>Coke 1.2L</h2>
+                <p class="price">P70.00</p>
+                <input type="number" id="coke-qty" min="1" value="1">
+                <button onclick="addToCart('Coke', 70.00, 'coke-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/carlo.jpeg" alt="Carlo Wine">
+                <h2>Carlo Rossi White wine 750mL</h2>
+                <p class="price">P450.00</p>
+                <input type="number" id="carlo-qty" min="1" value="1">
+                <button onclick="addToCart('Carlo Rossi White Wine', 450.00, 'carlo-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/black.jpeg" alt="Black label whiskey">
+                <h2>Black Label Whiskey 1L</h2>
+                <p class="price">P1,500.50</p>
+                <input type="number" id="black-qty" min="1" value="1">
+                <button onclick="addToCart('Black Label Whiskey', 1500.50, 'black-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/jack.jpeg" alt="Jack Daniels Whiskey">
+                <h2>Jack Daniels Whiskey 1L</h2>
+                <p class="price">P1,200.00</p>
+                <input type="number" id="jack-qty" min="1" value="1">
+                <button onclick="addToCart('Jack Daniels Whiskey', 1200.00, 'jack-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/novel.jpeg" alt="Novellino Wine">
+                <h2>Novellino Wine 1L</h2>
+                <p class="price">P430.00</p>
+                <input type="number" id="novel-qty" min="1" value="1">
+                <button onclick="addToCart('Novellino Wine', 430.00, 'novel-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/soju.jpeg" alt="Soju">
+                <h2>Soju 500ml</h2>
+                <p class="price">P82.50</p>
+                <input type="number" id="soju-qty" min="1" value="1">
+                <button onclick="addToCart('Soju', 82.50, 'soju-qty')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/redhorse.jpeg" alt="Redhorse">
+                <h2>Redhorse 1L</h2>
+                <p class="price">P331.75</p>
+                <input type="number" id="red-qty" min="1" value="1">
+                <button onclick="addToCart('Redhorse', 331.75, 'red-qty')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart items list -->
+        <div class="cart-details" id="cart-details">
+            <h2>Cart Details</h2>
+            <ul id="cart-items-list"></ul>
+            <p>Total: P<span id="cart-total-list">0.00</span></p>
+            <button class="order-button" onclick="placeOrder()">Place Order</button>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>
